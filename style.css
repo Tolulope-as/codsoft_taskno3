@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow',sans-serif;
+    background:hsl(210,46%,90%); 
+    min-height: 100vh;
+    
+   
+}
+
+  
+.container{
+    width:100%;
+    max-width :500px;
+    min-height: 500px;
+    box-shadow:0px 6px 20px 6px rgba(0,0,0,0.1);
+    background:#f3f4f9;
+    padding: 10px;
+    border-radius: 20px;
+    
+    
+   }
+.input-box{
+    height: 180px;
+    max-width: 490px;
+    background: #f3f4f9; 
+} 
+.display{
+    width: 99%;
+    height:99%;
+    background: #f3f4f9;
+    font-size: 40px;
+    border: none;
+    outline: 0;
+    text-align: right; 
+}
+
+.button-container{
+    min-height: 320px;
+    max-width: 500px;
+    padding: 20px;
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+   border-radius: 15px;
+
+    
+}
+button{
+    background:white;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    color:hsl(224, 30%, 27%);
+    box-shadow:2px 4px 9px 2px rgba(0,0,0,0.12);
+}
+button:active{
+    opacity: 0.4;
+}
+.key-button{
+    font-size: 20px;
+    color: rgb(84, 202, 248);
+}
+
+.equal-button{
+    background: #e0480ce1;
+    color: white;
+}
+.operator-button{
+    color:#f76126; 
+}
+.zero-button{
+    grid-column-start:1;
+    grid-column-end:3;
+}
+@media screen and (min-width:420px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:420px){
+   .container {
+       border-radius: 0;
+       padding:0;
+       width:100%;
+       min-height: 100vh;
+       position:relative;
+      
+   }
+    .input-box{
+        height:270px;
+    }
+    .button-container{
+        grid-template-columns: repeat(4,1fr);
+        position:absolute;
+        top:270px;
+        bottom:0;
+        left:0;
+        right:0;
+        padding:0;
+        gap:2px;
+        
+    }
+    button{
+        border-radius: 0;
+    }
+    .zero-button{
+        grid-column-start:1;
+        grid-column-end: 3;
+    }
+   
+}
